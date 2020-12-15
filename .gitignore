@@ -4,6 +4,8 @@ HELP.md
 .gradle
 build/
 .allure
+lombok.config
+debug.log
 
 ### STS ###
 .apt_generated
