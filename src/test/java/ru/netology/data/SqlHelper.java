@@ -1,13 +1,15 @@
 package ru.netology.data;
 
+import lombok.SneakyThrows;
 import lombok.val;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.SQLException;
 
 public class SqlHelper {
-    public static Connection getConnection() throws SQLException {
+
+    @SneakyThrows
+    public static Connection getConnection() {
         String dbUrl = System.getProperty("db.url");
         String login = System.getProperty("login");
         String password = System.getProperty("password");
@@ -15,21 +17,23 @@ public class SqlHelper {
         return connection;
     }
 
-    public static String getPaymentId() throws SQLException {
-        String payment_id = null;
-        val idSQL = "SELECT payment_id FROM order_entity order by created desc limit 1;";
+    @SneakyThrows
+    public static String getPaymentId() {
+        String paymentId = null;
+        val idSQL = "SELECT paymentId FROM order_entity order by created desc limit 1;";
         try (val conn = getConnection();
              val statusStmt = conn.prepareStatement(idSQL)) {
             try (val rs = statusStmt.executeQuery()) {
                 if (rs.next()) {
-                    payment_id = rs.getString("payment_id");
+                    paymentId = rs.getString("paymentId");
                 }
             }
         }
-        return payment_id;
+        return paymentId;
     }
 
-    public static String getStatusForPaymentByDebitCard(String payment_id) throws SQLException {
+    @SneakyThrows
+    public static String getStatusForPaymentByDebitCard(String payment_id) {
         String statusSQL = "SELECT status FROM payment_entity WHERE transaction_id =?; ";
         String status = null;
         try (val conn = getConnection();
@@ -44,7 +48,8 @@ public class SqlHelper {
         return status;
     }
 
-    public static String getPaymentAmount(String payment_id) throws SQLException {
+    @SneakyThrows
+    public static String getPaymentAmount(String payment_id) {
         String amountSQL = "SELECT amount FROM payment_entity WHERE transaction_id =?; ";
         String amount = null;
         try (val conn = getConnection();
@@ -59,7 +64,8 @@ public class SqlHelper {
         return amount;
     }
 
-    public static String getStatusForPaymentByCreditCard(String payment_id) throws SQLException {
+    @SneakyThrows
+    public static String getStatusForPaymentByCreditCard(String payment_id) {
         String statusSQL = "SELECT status FROM credit_request_entity WHERE bank_id =?; ";
         String status = null;
         try (val conn = getConnection();
