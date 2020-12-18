@@ -19,6 +19,7 @@ public class DataHelper {
     private DataHelper() {
 
     }
+
     public static CardInformation getValidCardInformation() {
         return new CardInformation("4444 4444 4444 4441", "22", "11", faker.name().fullName(), correctCVC);
     }
