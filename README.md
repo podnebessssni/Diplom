@@ -17,5 +17,5 @@
     * для использования Postgres: `java -Dspring.datasource.url=jdbc:postgresql://localhost:5432/postgres -jar artifacts/aqa-shop.jar` 
     * для использования MySQL: `java -Dspring.datasource.url=jdbc:mysql://localhost:3306/app -jar artifacts/aqa-shop.jar` 
 1. Запустите тесты командой: 
-    * при работе с postgres: `gradlew clean test -Ddb.url=jdbc:postgresql://localhost:5432/postgres  -Dlogin=app -Dpassword=pass -Dapp.url=http://localhost:8080` 
-    * при работе с mySql: `gradlew clean test -Ddb.url=jdbc:mysql://localhost:3306/app  -Dlogin=app -Dpassword=pass -Dapp.url=http://localhost:8080` .
+    * при работе с postgres: `gradlew clean test -Ddb.url=jdbc:postgresql://localhost:5432/postgres` 
+    * при работе с mySql: `gradlew clean test -Ddb.url=jdbc:mysql://localhost:3306/app`
