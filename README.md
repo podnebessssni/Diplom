@@ -4,7 +4,7 @@
 ## Документация проекта
 * [Планирование автоматизации](https://github.com/podnebessssni/Diplom/blob/master/documentation/Plan.md)
 * [Отчет по итогам тестирования](https://github.com/podnebessssni/Diplom/blob/master/documentation/Report.md)
-* [Отчет по итогам автоматизации](https://github.com/podnebessssni/Diplom/blob/master/documentation/Summary.mdм)
+* [Отчет по итогам автоматизации](https://github.com/podnebessssni/Diplom/blob/master/documentation/Summary.md)
 ## Необходимое ПО
 * IntelliJ IDEA;
 * Java11;
