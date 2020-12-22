@@ -21,7 +21,7 @@
 
 По всем багам заведены [Issues](https://github.com/podnebessssni/Diplom/issues)
 
-Итого процент успешных автоматизированных показателей составил 58,33%
+Итого процент успешных автоматизированных показателей составил 66,66%
 
 ![тесты](https://github.com/podnebessssni/Diplom/blob/master/documentation/Screenshot/report.png)
 
